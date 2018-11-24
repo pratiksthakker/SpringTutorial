@@ -1,4 +1,4 @@
-package spring.demo.first;
+package spring.core.inversionofcontrol;
 
 public class TrackCoach implements Coach {
 

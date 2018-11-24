@@ -1,4 +1,4 @@
-package spring.demo.first;
+package spring.core.inversionofcontrol;
 
 public class BaseBallCoach implements Coach {
 

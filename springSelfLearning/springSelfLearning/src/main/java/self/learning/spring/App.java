@@ -1,8 +1,8 @@
 package self.learning.spring;
 
-import spring.demo.first.BaseBallCoach;
-import spring.demo.first.Coach;
-import spring.demo.first.TrackCoach;
+import spring.core.inversionofcontrol.BaseBallCoach;
+import spring.core.inversionofcontrol.Coach;
+import spring.core.inversionofcontrol.TrackCoach;
 
 /**
  * Hello world!s
