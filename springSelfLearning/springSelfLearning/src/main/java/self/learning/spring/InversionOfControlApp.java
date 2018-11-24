@@ -15,7 +15,8 @@ public class InversionOfControlApp {
 
 		System.out.println(iocCoach.getDailyWorkOut());
 		
-		context.close();
+		context.close(); 
+		
 		
 	}
 	
