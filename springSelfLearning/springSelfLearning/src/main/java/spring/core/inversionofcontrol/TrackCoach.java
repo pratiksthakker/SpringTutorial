@@ -25,4 +25,14 @@ public class TrackCoach implements Coach {
 		return "Track Coach Fortune - " + myFortuneService.getFortune();
 	}
 
+	
+	//bean hooks method
+	public void doWhenStartingUp() {
+		System.out.println(" Doing stuff while initializing ");
+	}
+	
+	public void doWhenShuttingDown() {
+		System.out.println(" Doing stuff while shutting down ");
+	}
+	
 }
