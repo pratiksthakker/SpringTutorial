@@ -6,6 +6,25 @@ public class CricketCoach implements Coach {
 
 	FortuneService myFortuneService;//Here we will use Setter Dependency Injection to Inject this bean
 	
+	private String emailAddress;//Literal Value Injection
+	private String team;//Literal Value Injection
+	
+	public String getEmailAddress() {
+		return emailAddress;
+	}
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
+	}
+
+	public String getTeam() {
+		return team;
+	}
+
+	public void setTeam(String team) {
+		this.team = team;
+	}
+
 	public FortuneService getMyFortuneService() {
 		return myFortuneService;
 	}

@@ -37,12 +37,23 @@
    	
    	<!-- Setter Injection Start -->
    	
-	   	<bean id="myCricketCoach" class="spring.core.inversionofcontrol.CricketCoach">
+	   <!-- 	<bean id="myCricketCoach" class="spring.core.inversionofcontrol.CricketCoach">
 	   		<property name="myFortuneService" ref ="myFortune"></property>
-		 </bean>
+		 </bean> -->
 		 
    	<!-- Setter Injection End -->
+   	
+   	<!-- Start Setter Injection with Literal Value Injection -->
+   	
+   		<bean id="myCricketCoach" class="spring.core.inversionofcontrol.CricketCoach">
+	   		<property name="myFortuneService" ref ="myFortune"/>
+	   		<property name="emailAddress" value ="IndianFan@cricket.com"/>
+	   		<property name="team" value ="India"/>
+		 </bean>
+		 
+   	<!-- End Setter Injection with Literal Value Injection -->
    <!-- DI End -->
+   
    
    
  </beans> 
