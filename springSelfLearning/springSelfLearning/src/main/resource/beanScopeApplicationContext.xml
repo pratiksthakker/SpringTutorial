@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+   
+   <!-- DI Start -->
+   
+   	<bean id="myFortune" class= "spring.core.dependencyinjection.HappyFortuneService"></bean>
+   
+   
+   <!-- Beans Scope start-->
+   
+   <bean id="myCoach" class="spring.core.inversionofcontrol.BaseBallCoach"> <!-- when nothing is specied , the scope is singleton -->
+	   		<constructor-arg ref="myFortune"/>
+	   	</bean>
+	   	
+   <bean id="myTrackCoach" class="spring.core.inversionofcontrol.TrackCoach" scope="prototype"> <!-- when prototype is specied , for each bean reques and new object is created -->
+	   		<constructor-arg ref="myFortune"/>
+	   	</bean>
+	   	
+	<!-- Beans Scope start-->
+   
+   
+   
+ </beans> 
