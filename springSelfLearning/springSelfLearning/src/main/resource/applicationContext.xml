@@ -29,15 +29,15 @@
 	   		<constructor-arg ref="myFortune"/>Constructor injection
 	   	</bean> -->
 	   	
-	   	<!-- <bean id="myCoach" class="spring.core.inversionofcontrol.TrackCoach">
-	   		<constructor-arg ref="myFortune"/>Constructor injection
-	   	</bean> -->
+	   	 <bean id="myCoach" class="spring.core.inversionofcontrol.TrackCoach">
+	   		<constructor-arg ref="myFortune"/>
+	   	</bean>
    	
    	<!-- Constructor Injection Start -->	
    	
    	<!-- Setter Injection Start -->
    	
-	   	<bean id="myCoach" class="spring.core.inversionofcontrol.CricketCoach">
+	   	<bean id="myCricketCoach" class="spring.core.inversionofcontrol.CricketCoach">
 	   		<property name="myFortuneService" ref ="myFortune"></property>
 		 </bean>
 		 
