@@ -20,15 +20,28 @@
    <!--  IOC Ends -->
    
    <!-- DI Start -->
+   
    	<bean id="myFortune" class= "spring.core.dependencyinjection.HappyFortuneService"></bean>
+   
+   <!-- Constructor Injection Start -->	
+   
+	   <!-- 	<bean id="myCoach" class="spring.core.inversionofcontrol.BaseBallCoach">
+	   		<constructor-arg ref="myFortune"/>Constructor injection
+	   	</bean> -->
+	   	
+	   	<!-- <bean id="myCoach" class="spring.core.inversionofcontrol.TrackCoach">
+	   		<constructor-arg ref="myFortune"/>Constructor injection
+	   	</bean> -->
    	
-   <!-- 	<bean id="myCoach" class="spring.core.inversionofcontrol.BaseBallCoach">
-   		<constructor-arg ref="myFortune"/>Constructor injection
-   	</bean> -->
+   	<!-- Constructor Injection Start -->	
    	
-   	<bean id="myCoach" class="spring.core.inversionofcontrol.TrackCoach">
-   		<constructor-arg ref="myFortune"/><!-- Constructor injection -->
-   	</bean>
+   	<!-- Setter Injection Start -->
+   	
+	   	<bean id="myCoach" class="spring.core.inversionofcontrol.CricketCoach">
+	   		<property name="myFortuneService" ref ="myFortune"></property>
+		 </bean>
+		 
+   	<!-- Setter Injection End -->
    <!-- DI End -->
    
    
