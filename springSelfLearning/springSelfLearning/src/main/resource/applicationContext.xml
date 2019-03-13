@@ -22,7 +22,11 @@
    <!-- DI Start -->
    	<bean id="myFortune" class= "spring.core.dependencyinjection.HappyFortuneService"></bean>
    	
-   	<bean id="myCoach" class="spring.core.inversionofcontrol.BaseBallCoach">
+   <!-- 	<bean id="myCoach" class="spring.core.inversionofcontrol.BaseBallCoach">
+   		<constructor-arg ref="myFortune"/>Constructor injection
+   	</bean> -->
+   	
+   	<bean id="myCoach" class="spring.core.inversionofcontrol.TrackCoach">
    		<constructor-arg ref="myFortune"/><!-- Constructor injection -->
    	</bean>
    <!-- DI End -->

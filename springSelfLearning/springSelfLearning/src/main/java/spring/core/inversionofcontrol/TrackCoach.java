@@ -1,7 +1,18 @@
 package spring.core.inversionofcontrol;
 
+import spring.core.dependencyinjection.FortuneService;
+
 public class TrackCoach implements Coach {
 
+	//Here is an example of Dependency Injections since the Spring Configuration initializes and injects the relevant bean(implementation) for us
+		FortuneService myFortuneService;
+		
+		//Constructor Dependency Injection , check the application Context to see how its configured
+		public TrackCoach(FortuneService theFortuneService) {
+			myFortuneService = theFortuneService;
+		}
+		
+		
 	@Override
 	public String getDailyWorkOut() {
 
@@ -10,8 +21,8 @@ public class TrackCoach implements Coach {
 
 	@Override
 	public String getDailyFortune() {
-		// TODO Auto-generated method stub
-		return null;
+		
+		return "Track Coach Fortune - " + myFortuneService.getFortune();
 	}
 
 }
