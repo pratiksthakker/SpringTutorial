@@ -8,16 +8,24 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
    
-   
+   <!--IOC Starts This indicates Inversion Of Control since we are letting the configuration decide (TAKE CONTROL OF) which Class to initialize for this particular bean-->
    <!-- <bean id="myCoach" class="spring.core.inversionofcontrol.TrackCoach">
    </bean> -->
    
    <!-- <bean id="myCoach" class="spring.core.inversionofcontrol.BaseBallCoach">
    </bean> -->
    
-    <bean id="myCoach" class="spring.core.inversionofcontrol.CricketCoach">
-   </bean>
+    <!-- <bean id="myCoach" class="spring.core.inversionofcontrol.CricketCoach">
+   </bean>  -->
+   <!--  IOC Ends -->
    
+   <!-- DI Start -->
+   	<bean id="myFortune" class= "spring.core.dependencyinjection.HappyFortuneService"></bean>
+   	
+   	<bean id="myCoach" class="spring.core.inversionofcontrol.BaseBallCoach">
+   		<constructor-arg ref="myFortune"/><!-- Constructor injection -->
+   	</bean>
+   <!-- DI End -->
    
    
  </beans> 

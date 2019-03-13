@@ -13,7 +13,10 @@ public class InversionOfControlApp {
 		
 		Coach iocCoach = context.getBean("myCoach", Coach.class); // what implementation would be picked up is configured in the applicationContext.xml
 
-		System.out.println(iocCoach.getDailyWorkOut());
+		System.out.println(iocCoach.getDailyWorkOut());// IOC
+		
+		System.out.println(iocCoach.getDailyFortune());//DI
+		
 		
 		context.close(); 
 		
